@@ -10,9 +10,11 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
 
 @Entity
 @Table(name = "intervento_tecnico")
+@Data
 public class InterventoTecnico {
 
 	@Id
@@ -42,63 +44,6 @@ public class InterventoTecnico {
 
 	public InterventoTecnico() {
 
-	}
-
-	public Integer getIdInterventoTecnico() {
-		return idInterventoTecnico;
-	}
-
-	public void setIdInterventoTecnico(Integer idInterventoTecnico) {
-		this.idInterventoTecnico = idInterventoTecnico;
-	}
-
-	public String getMatricolaParteNew() {
-		return matricolaParteNew;
-	}
-
-	public void setMatricolaParteNew(String matricolaParteNew) {
-		this.matricolaParteNew = matricolaParteNew;
-	}
-
-	public String getMatricolaParteOld() {
-		return matricolaParteOld;
-	}
-
-	public void setMatricolaParteOld(String matricolaParteOld) {
-		this.matricolaParteOld = matricolaParteOld;
-	}
-
-	public String getTipoIntervento() {
-		return tipoIntervento;
-	}
-
-	public void setTipoIntervento(String tipoIntervento) {
-		this.tipoIntervento = tipoIntervento;
-	}
-
-	public Date getDataIntervento() {
-		return dataIntervento;
-	}
-
-	public void setDataIntervento(Date dataIntervento) {
-		this.dataIntervento = dataIntervento;
-	}
-
-	public String getEsito() {
-		return esito;
-	}
-
-	public void setEsito(String esito) {
-		this.esito = esito;
-	}
-
-	
-	public String getCliente() {
-		return cliente;
-	}
-
-	public void setCliente(String cliente) {
-		this.cliente = cliente;
 	}
 
 	@Override

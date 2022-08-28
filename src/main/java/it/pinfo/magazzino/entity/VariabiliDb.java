@@ -1,5 +1,7 @@
 package it.pinfo.magazzino.entity;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "variabili_db")
+@Data
 public class VariabiliDb {
 
 	@Id
@@ -18,21 +21,5 @@ public class VariabiliDb {
 
 	@Column(name = "primo_processo_effettuato")
 	private Boolean primoProcessoEffettuato;
-
-	public Boolean getPrimoProcessoEffettuato() {
-		return primoProcessoEffettuato;
-	}
-
-	public void setPrimoProcessoEffettuato(Boolean primoProcessoEffettuato) {
-		this.primoProcessoEffettuato = primoProcessoEffettuato;
-	}
-
-	public Integer getIdVariabileDb() {
-		return idVariabileDb;
-	}
-
-	public void setIdVariabileDb(Integer idVariabileDb) {
-		this.idVariabileDb = idVariabileDb;
-	}
 
 }

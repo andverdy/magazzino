@@ -1,5 +1,7 @@
 package it.pinfo.magazzino.entity;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "cliente_finale")
+@Data
 public class ClienteFinale {
 
 	@Id
@@ -28,44 +31,5 @@ public class ClienteFinale {
 	@Column(name = "email")
 	private String email;
 
-	public Long getIdClienteFinale() {
-		return idClienteFinale;
-	}
-
-	public void setIdClienteFinale(Long idClienteFinale) {
-		this.idClienteFinale = idClienteFinale;
-	}
-
-	public String getInsegna() {
-		return insegna;
-	}
-
-	public void setInsegna(String insegna) {
-		this.insegna = insegna;
-	}
-
-	public String getIndirizzo() {
-		return indirizzo;
-	}
-
-	public void setIndirizzo(String indirizzo) {
-		this.indirizzo = indirizzo;
-	}
-
-	public String getTelefono() {
-		return telefono;
-	}
-
-	public void setTelefono(String telefono) {
-		this.telefono = telefono;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
 
 }

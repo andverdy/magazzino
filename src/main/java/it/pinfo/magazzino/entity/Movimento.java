@@ -10,9 +10,11 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
 
 @Entity
 @Table(name = "movimento")
+@Data
 public class Movimento {
 
 	@Id
@@ -40,61 +42,6 @@ public class Movimento {
 	@Column(name = "cliente")
 	private String cliente;
 
-	public Integer getIdMovimento() {
-		return idMovimento;
-	}
-
-	public void setIdMovimento(Integer idMovimento) {
-		this.idMovimento = idMovimento;
-	}
-
-	public String getMatricolaParte() {
-		return matricolaParte;
-	}
-
-	public void setMatricolaParte(String matricolaParte) {
-		this.matricolaParte = matricolaParte;
-	}
-
-	public String getTipoMovimento() {
-		return tipoMovimento;
-	}
-
-	public void setTipoMovimento(String tipoMovimento) {
-		this.tipoMovimento = tipoMovimento;
-	}
-
-	public String getCondizioniParte() {
-		return condizioniParte;
-	}
-
-	public void setCondizioniParte(String condizioniParte) {
-		this.condizioniParte = condizioniParte;
-	}
-
-	public Date getDataMovimento() {
-		return dataMovimento;
-	}
-
-	public void setDataMovimento(Date dataMovimento) {
-		this.dataMovimento = dataMovimento;
-	}
-
-	public String getCliente() {
-		return cliente;
-	}
-
-	public void setCliente(String cliente) {
-		this.cliente = cliente;
-	}
-
-	public String getDescrizioneParte() {
-		return descrizioneParte;
-	}
-
-	public void setDescrizioneParte(String descrizioneParte) {
-		this.descrizioneParte = descrizioneParte;
-	}
 
 	@Override
 	public String toString() {

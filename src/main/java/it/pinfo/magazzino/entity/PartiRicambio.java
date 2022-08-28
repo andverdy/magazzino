@@ -1,5 +1,7 @@
 package it.pinfo.magazzino.entity;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "parti_ricambio")
+@Data
 public class PartiRicambio {
 
 	@Id
@@ -34,60 +37,5 @@ public class PartiRicambio {
 	@Column(name = "cliente")
 	private String cliente;
 
-	public Long getIdParte() {
-		return idParte;
-	}
-
-	public void setIdParte(Long idParte) {
-		this.idParte = idParte;
-	}
-
-	public String getMatricola() {
-		return matricola;
-	}
-
-	public void setMatricola(String matricola) {
-		this.matricola = matricola;
-	}
-
-	public String getDescParte() {
-		return descParte;
-	}
-
-	public void setDescParte(String descParte) {
-		this.descParte = descParte;
-	}
-
-	public String getStato() {
-		return stato;
-	}
-
-	public void setStato(String stato) {
-		this.stato = stato;
-	}
-
-	public String getCondizioniParte() {
-		return condizioniParte;
-	}
-
-	public void setCondizioniParte(String condizioniParte) {
-		this.condizioniParte = condizioniParte;
-	}
-
-	public String getCliente() {
-		return cliente;
-	}
-
-	public void setCliente(String cliente) {
-		this.cliente = cliente;
-	}
-
-	public Boolean getAggiornato() {
-		return aggiornato;
-	}
-
-	public void setAggiornato(Boolean aggiornato) {
-		this.aggiornato = aggiornato;
-	}
 
 }

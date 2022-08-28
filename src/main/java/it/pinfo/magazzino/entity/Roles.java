@@ -1,5 +1,7 @@
 package it.pinfo.magazzino.entity;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "roles")
+@Data
 public class Roles {
 
 	@Id
@@ -17,23 +20,6 @@ public class Roles {
 	@Column(name = "descrizione")
 	private String descrizione;
 	
-	
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getDescrizione() {
-		return descrizione;
-	}
-
-	public void setDescrizione(String descrizione) {
-		this.descrizione = descrizione;
-	}
 
 	@Override
 	public String toString() {
